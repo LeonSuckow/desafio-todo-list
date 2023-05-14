@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { PlusCircle } from 'phosphor-react';
 import styles from './Task.module.css';
 import TaskItem from "./TaskItem";
@@ -22,32 +22,35 @@ function Task({ }) {
   const [newTaskContent, setNewTaskContent] = useState('');
   const [summary, setSummary] = useState({} as summaryProps);
 
+
+  useEffect(() => {
+    onChangeTasksState();
+  }, [tasks])
+
   function handleAddNewTask() {
     event?.preventDefault()
     if (!newTaskContent) return toast('Conteúdo vazio', { type: 'error', theme: 'colored' });
     const newTask = { id: uuidv4(), content: newTaskContent, completed: false };
     setTasks([...tasks, newTask]);
     setNewTaskContent('');
-    onChangeTasksState();
   }
 
   const onChangeTasksState = useCallback(() => {
-    const summaryTaks = tasks.reduce((prev, next) => {
+    const summaryTasks = tasks.reduce((prev, next) => {
       if (next.completed)
         prev.completedTasks++;
 
       return prev
     }, { completedTasks: 0, percentCompleted: 0, total: 0 })
-    summaryTaks.total = tasks.length;
-    summaryTaks.percentCompleted = summaryTaks.completedTasks * 100 / summaryTaks.total;
+    summaryTasks.total = tasks.length;
+    summaryTasks.percentCompleted = summaryTasks.completedTasks * 100 / summaryTasks.total || 0;
 
-    setSummary(summaryTaks)
+    setSummary(summaryTasks)
   }, [tasks])
 
   function onDeleteTaskById(taskId: string) {
     const filteredTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(filteredTasks);
-    onChangeTasksState();
   }
 
   function onCompleteTaskById(taskId: string) {
@@ -61,7 +64,6 @@ function Task({ }) {
       return task;
     });
     setTasks(updatedTasks);
-    onChangeTasksState();
   }
 
   return (
