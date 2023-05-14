@@ -1,0 +1,76 @@
+
+ .task{
+  background-color: var(--gray-500);
+  border: solid 1px var(--gray-400);
+  padding: 1rem;
+  border-radius: .5rem;
+
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  color: var(--gray-200);
+  font-size: 14px;
+}
+.task .taskText{
+  flex: 1;
+}
+
+.task.checked .taskText{
+  text-decoration: line-through;
+}
+
+.checkbox{
+  line-height: 0;
+  position: relative;
+}
+
+.checkbox input{
+  width: 1.25rem;
+  height: 1.25rem;
+  border: solid 2px var(--blue-400);
+  border-radius: 50%;
+  appearance: none;
+  transition: background-color 0.3s, border 0.3s;
+}
+.checkbox input:checked{
+  background-color: var(--purple-400);
+  border: solid 2px var(--purple-400);
+}
+
+.checkbox svg{
+  width: 12px;
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox svg path{
+  fill:  transparent;
+  stroke: var(--gray-100);
+  stroke-width: 40;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 570;
+
+}
+
+.task.checked .checkbox  svg path{
+  animation: checked-animation 0.5s linear forwards;
+}
+
+.task .trash{
+  background-color: transparent;
+  outline: 0;
+  border: none;
+  color: var(--gray-200);
+}
+
+@keyframes checked-animation {
+  0%{
+    stroke-dashoffset: 570;
+  }
+
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
