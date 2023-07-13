@@ -13,14 +13,15 @@ interface TaskItemProps {
 
 interface summaryProps {
   total: number,
-  percentCompleted: number,
+  percentCompleted: string,
   completedTasks: number
 }
 
-function Task({ }) {
+function Task() {
   const [tasks, setTasks] = useState<TaskItemProps[]>([]);
   const [newTaskContent, setNewTaskContent] = useState('');
   const [summary, setSummary] = useState({} as summaryProps);
+
 
 
   useEffect(() => {
@@ -41,9 +42,9 @@ function Task({ }) {
         prev.completedTasks++;
 
       return prev
-    }, { completedTasks: 0, percentCompleted: 0, total: 0 })
+    }, { completedTasks: 0, percentCompleted: '0', total: 0 })
     summaryTasks.total = tasks.length;
-    summaryTasks.percentCompleted = summaryTasks.completedTasks * 100 / summaryTasks.total || 0;
+    summaryTasks.percentCompleted = Number(summaryTasks.completedTasks * 100 / summaryTasks.total || 0).toFixed(0);
 
     setSummary(summaryTasks)
   }, [tasks])
