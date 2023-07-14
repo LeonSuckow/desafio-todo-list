@@ -1,9 +1,14 @@
 # ToDo List (Desafio Rocketseat)
 
-![Projeto ToDo List](https://github.com/LeonSuckow/desafio-todo-list/blob/main/src/assets/todo-list.png)
-
 Este é um projeto de uma ToDo List (lista de tarefas) simples utilizando `react`, `vite`, que permite adicionar e remover tarefas, mostrando o percentual concluído das tarefas. 
 Sem conexão a um banco de dados (por enquanto), salvando tudo em memória, então se atualizar a página faz com que as tasks sumam.
+
+Site demonstrativo
+https://leonsuckow.github.io/desafio-todo-list/
+
+![Projeto ToDo List](https://github.com/LeonSuckow/desafio-todo-list/blob/main/src/assets/todo-list.png)
+
+
 
 ## Funcionalidades
 
