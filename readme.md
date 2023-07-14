@@ -1,4 +1,4 @@
-# ToDo List
+# ToDo List (Desafio Rocketseat)
 
 ![Projeto ToDo List](https://github.com/LeonSuckow/desafio-todo-list/blob/main/src/assets/todo-list.png)
 
@@ -16,12 +16,12 @@ Siga as instruções abaixo para utilizar o projeto ToDo List:
 
 1. Clone este repositório em sua máquina local:
    ```
-   git clone https://github.com/seu-usuario/todo-list.git
+   git clone https://github.com/LeonSuckow/desafio-todo-list.git
    ```
    
 2. Navegue até o diretório do projeto:
    ```
-   cd todo-list
+   cd desafio-todo-list
    ```
    
 3. Instale as dependências.
