@@ -3,6 +3,7 @@
 ![Projeto ToDo List](https://github.com/LeonSuckow/desafio-todo-list/blob/main/src/assets/todo-list.png)
 
 Este é um projeto de uma ToDo List (lista de tarefas) simples, que permite adicionar e remover tarefas, mostrando o percentual concluído das tarefas.
+Sem conexão a um banco de dados (por enquanto), salvando tudo em memória, então se atualizar a página as tasks vão embora.
 
 ## Funcionalidades
 
