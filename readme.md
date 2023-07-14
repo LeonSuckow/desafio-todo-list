@@ -25,13 +25,13 @@ Siga as instruções abaixo para utilizar o projeto ToDo List:
    ```
    
 3. Instale as dependências.
-  ```
-  npm install
-  ```
-6. Rode o projeto
-  ```
-  npm run dev
-  ```
+   ```
+   npm install
+   ```
+4. Rode o projeto
+   ```
+   npm run dev
+   ```
  
 5. Você verá a interface da ToDo List, onde poderá adicionar e remover tarefas.
 
