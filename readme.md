@@ -2,10 +2,11 @@
 
 ![Projeto ToDo List](https://github.com/LeonSuckow/desafio-todo-list/blob/main/src/assets/todo-list.png)
 
-Este é um projeto de uma ToDo List (lista de tarefas) simples, que permite adicionar e remover tarefas, além de mostrar o percentual concluído das tarefas.
+Este é um projeto de uma ToDo List (lista de tarefas) simples, que permite adicionar e remover tarefas, mostrando o percentual concluído das tarefas.
 
 ## Funcionalidades
 
+- **Listagem de tasks:** Lista ordenada pela ordem de criação.
 - **Adicionar Task:** Permite adicionar uma nova tarefa à lista.
 - **Remover Task:** Permite remover uma tarefa existente da lista.
 - **Ver Percentual Concluído:** Exibe o percentual de tarefas concluídas em relação ao total de tarefas na lista.
@@ -47,9 +48,6 @@ Aqui está um exemplo de como utilizar as funcionalidades do projeto:
 2. **Remover Task:**
    - Clique no botão "Remover" ao lado da tarefa que deseja excluir.
    - A tarefa será removida da lista.
-
-3. **Ver Percentual Concluído:**
-   - O percentual concluído será atualizado automaticamente sempre que uma tarefa for adicionada ou removida.
 
 ## Contribuições
 
